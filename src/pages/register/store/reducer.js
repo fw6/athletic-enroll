@@ -2,7 +2,11 @@ import { fromJS } from 'immutable'
 import { types } from '../store'
 
 const defaultState = fromJS({
-  isLogin: false
+  regform: {
+    phone: '',
+    username: '',
+    password: ''
+  }
 })
 
 export default (state = defaultState, action) => {

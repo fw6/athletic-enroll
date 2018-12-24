@@ -1,25 +1,21 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
-// import { actions } from './store'
+import RegForm from './form'
 
-class Register extends React.Component {
+class Reg extends React.Component {
+  state = {
+    form: {
+      getFieldProps: null
+    }
+  }
+
   render() {
-    return <h2>注册</h2>
+    return (
+      <div>
+        <RegForm {...this.state} />
+      </div>
+    )
   }
 }
 
-const mapState = state => ({
-  // isLogin: state.getIn(['login', 'isLogin'])
-})
-
-const mapDispatch = dispatch => ({
-  // login(accountEle, pwdEle) {
-  //   dispatch(actions.loginHandler(accountEle.value, pwdEle.value1))
-  // }
-})
-
-export default connect(
-  mapState,
-  mapDispatch
-)(Register)
+export default Reg
